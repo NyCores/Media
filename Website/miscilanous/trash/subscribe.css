@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: goldenrod; /* Dark background color for header */
+    color: #fff; /* Text color for header */
+    text-align: center;
+}
+
+header img {
+    float: left;
+    background-color: #333;
+    padding-top: 0px;
+    margin-top: -20px;
+    overflow: none; /* Hide any content that overflows the container */
+}
+
+header a img {
+    height: auto; /* Maintain the original height of the image */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%); /* Clip the bottom 10% of the image */
+}
+
+header a img {
+    float: right;
+    background-color: #333;
+    padding-top: 0px;
+    margin-top: -29px;
+}
+
+header h1::first-letter {
+    font-size: 64px; /* Set the font size of the first letter */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: left;
+    padding-left: 50px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.container{
+	position: relative;
+	margin-bottom: 20px;
+	label {
+		position: absolute;
+		top: 14px;
+		left: 7px;
+		padding: 0 5px;
+		transition: top .5s, font-size .3s;
+	}
+	input {
+		height: 45px;
+		padding: 0 12px;
+		&:hover + label,
+		&:focus + label,
+		&:valid + label {
+			top: -9px;
+			font-size: 12px;
+		}
+	}
+}
+
+
+// General / Fluff
+$accent-color: red; 
+	
+html * {
+	box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $accent-color;
+    lex-direction: column;
+}
+
+label {
+	color: #FFF;
+	background: $accent-color;
+}
+
+input {
+	color: #FFF;
+	border: 2px solid #FFF;
+	background: $accent-color;
+	width: 350px;
+	outline: 0;	
+}
+
+button {
+	width: 350px;
+	color: $accent-color;
+	background: #FFF;
+	border: 2px solid #FFF;
+	margin-bottom: 30px;
+	padding: 10px 0;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: .3s background ease-in, .3s color ease-in;
+	&:hover {
+		color: #FFF;
+		background: $accent-color;
+	}
+}

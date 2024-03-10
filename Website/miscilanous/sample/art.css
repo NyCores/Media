@@ -1,0 +1,210 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-animation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height of each layer as needed */
+    animation-duration: 10s; /* Adjust animation duration as needed */
+    animation-iteration-count: infinite;
+}
+
+.layer1 {
+    background: #3399ff; /* Adjust background color of each layer as needed */
+    animation-name: squigglyAnimation1;
+    animation-delay: 0s; /* Delay each layer for staggered effect */
+}
+
+.layer2 {
+    background: #66ccff;
+    animation-name: squigglyAnimation2;
+    animation-delay: 2s;
+    display: none;
+}
+
+.layer3 {
+    background: #99ccff;
+    animation-name: squigglyAnimation3;
+    animation-delay: 4s;
+    display: none;
+}
+
+.layer4 {
+    background: #ff0000; /* linear-gradient(to right, #ff0000, #ff3333); */
+    animation-name: squigglyAnimation4;
+    animation-delay: 0s;
+}
+
+.layer5 {
+    background: #ff3333; /* linear-gradient(to right, #ff3333, #ff6666); */
+    animation-name: squigglyAnimation5;
+    animation-delay: 2s;
+    display: none;
+}
+
+.layer6 {
+    background:  #ff6666; /* linear-gradient(to right, #ff6666, #ff9999); */
+    animation-name: squigglyAnimation6;
+    animation-delay: 4s;
+    display: none;
+}
+
+
+@keyframes squigglyAnimation1 {
+    0% {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        left: 0;
+    }
+    50% {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        bottom: 50px;
+        up: 50px;
+        left: 0;
+    }
+    100% {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@keyframes squigglyAnimation2 {
+    0% {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        bottom: 0;
+        right: 0;
+    }
+    50% {
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        bottom: 30px;
+        right: 30px;
+    }
+    100% {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@keyframes squigglyAnimation3 {
+    0% {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        bottom: 0;
+        left: 0;
+    }
+    50% {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        bottom: 20px;
+        left: 20px;
+    }
+    100% {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        bottom: 0;
+        left: 0;
+    }
+}
+@keyframes squigglyAnimation4 {
+    0% {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        bottom: 50px;
+        left: 50px;
+    }
+    50% {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        bottom: 75px;
+        up: 300px;
+        left: 50px;
+    }
+    100% {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        bottom: 50px;
+        left: 50px;
+    }
+}
+
+@keyframes squigglyAnimation5 {
+    0% {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 120px;
+    }
+    50% {
+        border-radius: 50%;
+        width: 490px;
+        height: 490px;
+        bottom: 120px;
+        right: 210px;
+    }
+    100% {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 120px;
+    }
+}
+
+@keyframes squigglyAnimation6 {
+    0% {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        bottom: 0;
+        left: 80px;
+    }
+    50% {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        left: 140px;
+    }
+    100% {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        bottom: 0;
+        left: 80px;
+    }
+}

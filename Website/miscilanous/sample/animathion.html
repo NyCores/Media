@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Animation</title>
+    <script src="https://cdn.jsdelivr.com/npm/chart.js"></script> <!-- Include Matplotlib library -->
+</head>
+<body>
+    <canvas id="myCanvas"></canvas> <!-- Create a canvas element for the animation -->
+</body>
+<script>
+    // Function to update the plot
+    function updatePlot(frame) {
+        // Clear the previous plot
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Generate new data for the plot
+        const x = [...Array(100).keys()];
+        const y = x.map(val => Math.sin(val + frame * 0.1));
+        // Plot the new data
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: x,
+                datasets: [{
+                    label: 'Sin Wave',
+                    data: y,
+                    borderColor: 'blue',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'X-axis'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Y-axis'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Get canvas element
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Create an animation
+    const animation = new Chart.Animation(ctx, {
+        duration: 10000,
+        easing: 'linear', 
+        onProgress: updatePlot
+    });
+
+    // Start the animation
+    animation.render();
+</script>
+</html>
