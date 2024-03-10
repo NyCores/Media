@@ -1,0 +1,200 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+}
+
+/* Header Styles */
+header {
+    background-color: goldenrod; /* Dark background color for header */
+    color: black; /* Text color for header */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img{
+    float: left;
+    background-color: #333;
+    padding-top: 0px;
+    margin-top: -20px;
+    overflow: none; /* Hide any content that overflows the container */
+
+}
+
+header a img {
+    height: auto; /* Maintain the original height of the image */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%); /* Clip the bottom 10% of the image */
+}
+
+header a img{
+    float: right;
+    background-color: #333;
+    padding-top: 0px;
+    margin-top: -29px;
+}
+
+header h1::first-letter {
+    font-size: 64px; /* Set the font size of the first letter */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: left;
+    padding-left: 50px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding-left: 60px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    float: left;
+    margin: 5px;
+    margin-right: -25px;
+    padding-top: 5px;
+    padding-left: 45px;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Post Form Styles */
+#post-form {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+#post-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 16px;
+}
+
+#post-form button {
+    background-color: #3897f0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#post-form button:hover {
+    background-color: #2684f2;
+    transform: scale(1.05);
+}
+
+/* Posts Container Styles */
+#posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Post Styles */
+.post {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.post-content {
+    padding: 16px;
+}
+
+.post-content p {
+    margin-bottom: 10px;
+}
+
+.post-content .post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-content .post-actions button {
+    background-color: transparent;
+    border: none;
+    color: #3897f0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-content .post-actions button:hover {
+    color: #2684f2;
+}
+
+/* Button Styles */
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #3897f0;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2684f2;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: goldenrod; /* Dark background color for footer */
+    color: #fff; /* Text color for footer */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
