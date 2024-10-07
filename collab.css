@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between; 
+    margin-left: 440px; 
+    margin-right: 440px; 
+    margin-top: 80px; 
+}
+
+.social-icons img {
+    width: 100px;
+    height: auto; 
+    border-radius: 10px;
+}
+
+.icon{
+    padding-top: 350px;
+}

@@ -2,13 +2,14 @@
 footer {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: goldenrod;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
-    margin: 0%;
+    margin: 0px;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1; /* Ensure it is above other content */
 }
 
 /* Remove link color and underline decoration */

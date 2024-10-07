@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="bossie.css">
+  <title>The Bossie Collective</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header" style="text-align: center;">
+      <h1 class="brand">The Bossie Collective</h1>
+      <nav class="navigation">
+        <div class="nav-column">
+          <a href="bossie.html" class="nav-link active-page">Media</a>
+          <a href="about.html" class="nav-link about">About</a>
+          <a href="support.html" class="nav-link support">Support</a>
+          <a href="collab.html" class="nav-link collab">Collab</a>
+          <a href="media.html" class="nav-link media">Media</a>          
+        </div>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="slideshow">
+        <div class="slide fade">
+          <img src="images/Mossie View.png" class="slide-image" alt="Image 1">
+        </div>
+        <div class="slide fade">
+          <img src="images/Screenshot .png" class="slide-image" alt="Image 2">
+        </div>
+        <div class="slide fade">
+          <img src="images/Mossie Full.png" class="slide-image" alt="Image 3">
+        </div>
+        <div class="slide fade">
+          <img src="images/IMG_0293.heic" class="slide-image" alt="Image 4">
+        </div>
+        <div class="slide fade">
+          <img src="images/IMG_0520.heic" class="slide-image" alt="Image 5">
+        </div>
+        <div class="slide fade">
+          <img src="images/IMG_0517.heic" class="slide-image" alt="Image 6">
+        </div>
+        <div class="slide fade">
+          <img src="images/Mossie Profile.png" class="slide-image" alt="Image 7">
+        </div>
+      </div>
+
+      <div class="video-container" id="video-container">
+        <video class="background-video" id="background-video">
+          <source src="videos/Bossie Intro.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <div class="text-center">
+        <h2 class="headline">Indulge Your Passions</h2>
+        <button href="subscribe.html" class="explore-button">Subscribe →</button>
+      </div>
+
+      <div class="indicators">
+        <button class="indicator active" onclick="currentSlide(0)"></button>
+        <button class="indicator" onclick="currentSlide(1)"></button>
+        <button class="indicator" onclick="currentSlide(2)"></button>
+        <button class="indicator" onclick="currentSlide(3)"></button>
+        <button class="indicator" onclick="currentSlide(4)"></button>
+        <button class="indicator" onclick="currentSlide(5)"></button>
+        <button class="indicator" onclick="currentSlide(6)"></button>
+      </div>
+
+      <div class="video-button">
+        <button class="see-video-button play"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="header.js"></script>
+  <script src="bossie.js"></script>
+</body>
+</html>

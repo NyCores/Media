@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate & Promote - The Bossie Collective</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="brand">The Bossie Collective</h1>
+        <nav class="navigation">
+            <div class="nav-column">
+                <a href="bossie.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="collab.html" class="nav-link">Collab</a>
+                <a href="media.html" class="nav-link">Media</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="donate-content">
+        <section class="donation-info">
+            <h2>Support Our Mission</h2>
+            <p>Your support helps us continue our work and reach more people. Thank you for your generosity!</p>
+            <div class="donation-options">
+                <h3>Donation Options:</h3>
+                <ul>
+                    <li><strong>$10</strong> - Small Contribution</li>
+                    <li><strong>$50</strong> - Regular Supporter</li>
+                    <li><strong>$100</strong> - Gold Donor</li>
+                    <li><strong>Custom Amount</strong> - Enter Your Own Donation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="payment-form">
+            <h2>Make a Donation</h2>
+            <form action="process_donation.php" method="POST">
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" step="0.01" min="0" placeholder="Enter amount">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <button type="submit">Donate Now</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 The Bossie Collective. All rights reserved.</p>
+    </footer>
+
+    <script src="header.js"></script>
+</body>
+</html>

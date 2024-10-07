@@ -1,0 +1,227 @@
+.dark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    min-height: 10vh;
+    font-size: 12vmin;
+    background: rgba(3, 166, 163, 0); 
+    scale: 0.31;
+}
+
+@property --circle {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
+}
+
+@property --night {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
+}
+
+@property --pos-y-ray1 {
+    syntax: '<percentage>';
+    initial-value: 10%;
+    inherits: false;
+}
+
+@property --pos-x-ray2 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-y-ray2 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-x-ray3 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-x-ray4 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-y-ray4 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-y-ray5 {
+    syntax: '<percentage>';
+    initial-value: 90%;
+    inherits: false;
+}
+
+@property --pos-x-ray6 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-y-ray6 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-x-ray7 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-x-ray8 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --pos-y-ray8 {
+    syntax: '<length>';
+    initial-value: 1px;
+    inherits: false;
+}
+
+@property --width-star1 {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
+}
+
+@property --width-star2 {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
+}
+
+@property --width-star3 {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
+}
+
+.toggle {
+    /* Existing styles */
+    --night: 0px;
+    --circle: 0.14em;
+    --pos-y-ray1: 32.5%;
+    --pos-x-ray2: 0.65em;
+    --pos-y-ray2: 0.675em;
+    --pos-x-ray3: 0.725em;
+    --pos-x-ray4: 0.65em;
+    --pos-y-ray4: 1.12em;
+    --pos-y-ray5: 67.5%;
+    --pos-x-ray6: 0.225em;
+    --pos-y-ray6: 1.12em;
+    --pos-x-ray7: 0.125em;
+    --pos-x-ray8: 0.225em;
+    --pos-y-ray8: 0.675em;
+    --width-star1: 0px;
+    --width-star2: 0px;
+    --width-star3: 0px;
+    appearance: none;
+    position: relative;
+    font-size: 1em;
+    width: 2em;
+    height: 2em; /* Ensure the height matches the width to maintain aspect ratio */
+    border: max(1px, 0.05em) solid;
+    border-radius: 1em; /* Adjust border-radius for vertical button */
+    background:
+        /* sun */
+        radial-gradient(circle at 0.5em 50%, #0000 var(--circle), #000 0 calc(var(--circle) + 0.045em), #0000 0),
+        radial-gradient(70% 50%, #000 99%, #0000) 0.475em var(--pos-y-ray1) / 0.04em 0.15em,
+        linear-gradient(-45deg, #0000 38%, #000 0 62%, #0000 0) var(--pos-x-ray2) var(--pos-y-ray2) / 0.12em 0.12em,
+        radial-gradient(50% 70%, #000 99%, #0000) var(--pos-x-ray3) 50% / 0.15em 0.04em,
+        linear-gradient(45deg, #0000 38%, #000 0 62%, #0000 0) var(--pos-x-ray4) var(--pos-y-ray4) / 0.12em 0.12em,
+        radial-gradient(70% 50%, #000 99%, #0000) 0.475em var(--pos-y-ray5) / 0.04em 0.15em,
+        linear-gradient(-45deg, #0000 38%, #000 0 62%, #0000 0) var(--pos-x-ray6) var(--pos-y-ray6) / 0.12em 0.12em,
+        radial-gradient(50% 70%, #000 99%, #0000) var(--pos-x-ray7) 50% / 0.15em 0.04em,
+        linear-gradient(45deg, #0000 38%, #000 0 62%, #0000 0) var(--pos-x-ray8) var(--pos-y-ray8) / 0.12em 0.12em,
+        /* moon */
+        radial-gradient(farthest-side circle at 40% 50%, #0000 0.3em, #fff 0 0.33em, #0000 0) 95% 50% / 0.7em 0.7em,
+        radial-gradient(farthest-side circle at 29% 50%, #0000 0.19em, #fff 0 0.22em, #0000 0) 81% 50% / 0.5em 0.5em,
+        radial-gradient(circle at 20% 30%, #fff var(--width-star1), #0000 0),
+        radial-gradient(circle at 30% 70%, #fff var(--width-star2), #0000 0),
+        radial-gradient(circle at 45% 45%, #fff var(--width-star3), #0000 0),
+        /* extra */
+        radial-gradient(circle at 0.5em 50%, #000 var(--night), #0000 0);
+    background-repeat: no-repeat;
+    transition:
+        --night 0.5s 0.8s,
+        --circle 0.25s 0.7s,
+        --pos-y-ray1 0.25s 0s,
+        --pos-x-ray2 0.45s 0.1s, --pos-y-ray2 0.45s 0.1s,
+        --pos-x-ray3 0.6s 0.2s,
+        --pos-x-ray4 0.45s 0.4s, --pos-y-ray4 0.45s 0.4s,
+        --pos-y-ray5 0.25s 0.6s,
+        --pos-x-ray6 0.45s 0.75s, --pos-y-ray6 0.45s 0.75s,
+        --pos-x-ray7 0.25s 0.9s,
+        --pos-x-ray8 0.45s 1.1s, --pos-y-ray8 0.45s 1.1s,
+        --width-star1 0.5s 1.25s, --width-star2 0.5s 1.3s, --width-star3 0.5s 1.35s;
+    transition-delay: 0s, 0.4s, 0.5s, 0.6s, 0.6s, 0.7s, 0.9s, 0.9s, 1.2s, 1.25s, 1.25s, 1.55s, 1.65s, 1.65s, 0s, 0.05s, 0.1s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        border: 0.2em solid #0000;
+        transform: translate(35%, -50%);
+    }
+
+    &:checked {
+        --night: 2em;
+        --circle: 0em;
+        --pos-y-ray1: -20%;
+        --pos-x-ray2: 1.15em;
+        --pos-y-ray2: -0.225em;
+        --pos-x-ray3: 2em;
+        --pos-x-ray4: 2.15em;
+        --pos-y-ray4: 2.12em;
+        --pos-y-ray5: 120%;
+        --pos-x-ray6: -0.275em;
+        --pos-y-ray6: 1.12em;
+        --pos-x-ray7: -0.25em;
+        --pos-x-ray8: -0.275em;
+        --pos-y-ray8: -0.225em;
+        --width-star1: 0.04em;
+        --width-star2: 0.04em;
+        --width-star3: 0.04em;
+        transition-delay: 1.5s, 1.35s, 0s, 0.1s, 0.1s, 0.2s, 0.4s, 0.4s, 0.6s, 0.75s, 0.75s, 0.9s, 1.1s, 1.1s, 1.7s, 1.9s, 1.8s;
+
+        &::before {
+            content: "";
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            position: absolute;
+            width: 1.9em; /* Size of the circle */
+            height: 1.9em; /* Size of the circle */
+            border: 0.055em solid rgb(255, 255, 255); /* Very low opacity border */
+            background: radial-gradient(circle at 0.5em 50%, #370ca3 0.3em, #a60baec3 0.33em);
+            background: transparent; /* Hollow center */
+            transform: translate(-50%, -50%); /* Center vertically and horizontally */
+        }
+    }
+
+    &[disabled] {
+        opacity: 0.25;
+    }
+}
+{
+    transform: rotate(90deg);    /* Rotate the button to make it vertical */
+}

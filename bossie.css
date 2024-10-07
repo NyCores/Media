@@ -1,0 +1,158 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  color: #fff; /* Light text color */
+  border: 2px solid #fff; /* White border on all sides */
+  box-sizing: border-box; /* Ensure border is included in element's total width and height */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box; /* Ensure border is included in element's total width and height */
+  padding: 16px; /* Padding to avoid content touching the border */
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover entire viewport */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.background-video {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+
+.headline {
+  font-size: 4em; /* Larger text size */
+  font-weight: 600; /* Font weight */
+  margin-bottom: 16px; /* Margin bottom */
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 100px;
+}
+
+.explore-button {
+  background-color: #fff; /* Accent color */
+  color: black; /* Light text color */
+  border: none;
+  text-decoration: none;
+  border-radius: 9999px; /* Fully rounded corners */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: rgba(218, 165, 32, 0.758); /* Hover effect for accent button */
+}
+
+.indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #fff; /* Primary button color */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+.indicator:hover, .indicator.active {
+  background-color: #ffd700; /* Hover effect for indicators */
+}
+
+.video-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.see-video-button {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent card background */    
+  color: #000; /* Card text color */
+  border: none;
+  border-radius: 9999px; /* Fully rounded corners */
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.see-video-button:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Hover effect for see video button */
+}
+
+.see-video-button.play::before {
+  content: '►'; /* Play icon */
+  color: #000;
+  font-size: 16px;
+}
+
+.see-video-button.pause::before {
+  content: '❚❚'; /* Pause icon */
+  color: #000;
+  font-size: 16px;
+}

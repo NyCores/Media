@@ -1,57 +1,22 @@
-/* Global Styles */
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body, html {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: rebeccapurple; /* Light background color */
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: goldenrod; /* Dark background color for header */
-    color: black; /* Text color for header */
-    padding: 20px 0;
-    text-align: center;
-}
-
-header img{
+.icon-photo {
     float: left;
-    background-color: #333;
-    padding-top: 0px;
-    margin-top: -20px;
-    overflow: none; /* Hide any content that overflows the container */
-
+    width: 100px;
+    height: 100px;
+    margin: 0 15px 15px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; 
 }
 
-header a img {
-    height: auto; /* Maintain the original height of the image */
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%); /* Clip the bottom 10% of the image */
-}
-
-header a img{
-    float: right;
-    background-color: #333;
-    padding-top: 0px;
-    margin-top: -25.5px;
-}
-
-header h1::first-letter {
-    font-size: 64px; /* Set the font size of the first letter */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
-    text-align: left;
-    padding-left: 50px;
-    margin-top: -20px;
-    margin-bottom: -20px;
+.background-photo {
+    width: 100%;
+    height: auto;
 }
 
 nav ul {
@@ -61,122 +26,109 @@ nav ul {
 
 nav ul li {
     display: inline;
-    padding-left: 60px;
+    margin-right: 10px;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    text-align: right;
-    float: left;
-    margin: 5px;
-    margin-right: -25px;
-    padding-top: 5px;
-    padding-left: 45px;
-    
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 150px; 
+    padding-bottom: 75px;
+    font-size: 20px;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.intro {
+    margin-bottom: 20px;
 }
 
-h2 {
-    color: #999; /* Dark text color for headings */
-    margin-top: 0px;
-    margin-bottom: -10px;
-    text-align: justify;
+.intro h2, .mission h2, .team h2 {
+    color: #333;
+    text-align: center;
+    padding: 10px; 
+    border-radius: 15px; 
+    width: fit-content; 
+    margin: 20px auto 0; 
 }
 
-.details{
-    margin-top: 0px;
+.intro p, .mission p {
+    line-height: 1.25;
 }
 
-.intro1{
-    padding: 0px 0px 0px 175px;
+.intro ul {
+    padding-left: 20px;
 }
 
-.intro p {
-    line-height: 1.6; /* Increase line height for readability */
-    text-indent: 175px; /* Right indent for the first three lines */
-    }
+.intro p, .mission p {
+    margin-bottom: 15px;
+}
 
-ul {
-    list-style: none;
-    margin: 0;
+.team .details {
+    list-style-type: none;
     padding: 0;
 }
 
-footer {
-    background-color: goldenrod; /* Dark background color for footer */
-    color: #fff; /* Text color for footer */
+.team .details li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
     text-align: center;
-    padding: 5px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.modal {
+    display: none;
     position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.icon-photo {
-    margin-left: 440px;
-    margin-right: -1000px;
-    width: 160px; /* Set width of each icon */
-    height: auto; /* Maintain aspect ratio */
-    border: 5px solid blueviolet; /* 2px solid gold outline */
-    border-radius: 100px; /* Add rounded corners */
-        position: relative; /* Set the position to relative */
-        z-index: 9999; /* Set a high z-index value to place the image in front of other elements */
-}
-
-.background-photo {
-    /* Set rules to fill background */
-    min-height: 100vh; /* Ensures the background covers the full viewport height */
-    min-width: 100%; /* Ensures the background covers the full width of the viewport */
-
-    /* Set up proportionate scaling */
-    width: 40%; /* Adjust the width of the image */
-    height: auto; /* Maintain aspect ratio */
-
-    /* Set up positioning */
-    position: fixed;
-    top: 74%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the background image */
-    z-index: -1; /* Ensures the background stays behind other content */
-    background-image: url('path/to/your/image.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Ensures the background image covers the entire div */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    opacity: 0.2; /* Adjust opacity to make the image darker */
-}
-
-.overlay {
-    /* Set up dark overlay */
-    position: absolute;
-    top: 0;
+    z-index: 3;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to make the overlay darker */
-    z-index: -1; /* Ensure overlay stays behind other content */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    backdrop-filter: blur(15px); /* Blurs the background */
 }
 
-/* Styles for the social icons */
-.social-icons {
-    display: flex; /* Make icons display in a row */
-    justify-content: space-between; /* Distribute space evenly between icons */
-    margin-left: 440px; /* Add some space above the icons */
-    margin-right: 440px; /* Add some space above the icons */
-    margin-top: 80px; /* Add some space above the icons */
-}
-.social-icons img {
-    width: 100px; /* Set width of each icon */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Add rounded corners */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px; /* Add padding to space out the content */
+    width: 35%; 
+    background-color: transparent; 
+    color: #000; 
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the modal */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+.modal-content h2 {
+    padding: 10px; /* Add padding to the heading */
+    border: 5px solid #daa520;
+    background-color: white; /* White background */
+    color: #000; /* Black text */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    width: fit-content; /* Adjust button size */
+    margin: 20px auto 0; /* Center the button and add margin to space out */
+}
+
+.modal-photo {
+    width: auto;
+    height: 500px;
+    border-radius: 500px;
+    border: 10px solid #daa520;
+    margin-bottom: 10px; /* Add margin to space out the photo and name */
+}
+
+/* Hide the close button */
+.close-button {
+    display: none;
 }

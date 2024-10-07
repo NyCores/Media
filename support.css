@@ -1,0 +1,179 @@
+body, html {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100%;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    margin-top: 100px; /* To prevent content from being under the header */
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: maroon; /* Gold color */
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.donation-options {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.donation-options h3 {
+    font-size: 2em;
+    color: #daa520;
+    margin-bottom: 20px;
+}
+
+.donation-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.donation-button, .donate-now-button {
+    background-color: #daa520;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 9999px; /* Fully rounded corners */
+}
+
+.donation-button {
+    background-color: #000000;
+}
+
+.donation-button:hover, .donate-now-button:hover {
+    background-color: #b8860b;
+}
+
+.custom-donation-input {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #daa520;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.thank-you h2 {
+    font-size: 2.5em;
+    color: maroon;
+}
+
+.thank-you p {
+    font-size: 1.2em;
+}
+
+/*
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #f4f4f4;
+    padding: 16px; 
+    text-align: center;
+    background-color: rgba(218, 165, 32);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 150px; 
+    padding-bottom: 75px;
+    font-size: 20px;
+}
+
+.intro, .donation-form, .supporters {
+    margin-bottom: 30px;
+}
+
+.intro h2, .donation-form h3, .supporters h3 {
+    color: #333;
+}
+
+.intro p {
+    margin-bottom: 20px;
+}
+
+.donation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-form label {
+    margin: 10px 0 5px;
+}
+
+.donation-form input, .donation-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.donation-form button {
+    padding: 10px 15px;
+    background-color: rgba(218, 165, 32);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.donation-form button:hover {
+    background-color: rgba(184, 134, 11);
+}
+
+.supporters ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.supporters li {
+    margin-bottom: 10px;
+}
+
+.supporters strong {
+    color: #daa520;
+}
+*/

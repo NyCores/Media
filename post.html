@@ -17,27 +17,27 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li> <!-- Link to services page -->
-                <li><a href="contact.html">Contact</a></li> <!-- Link to contact page -->
+                <li><a href="miscilanous/chart/chart.html">Contact</a></li> <!-- Link to contact page -->
             </ul>
         </nav>
-    </header>
-
-
-    <div id="post-form">
-        <input type="file" id="image-upload">
-        <button id="post-btn">Post</button>
+    </header> 
+    <div id="post" class="flex flex-col items-center justify-center">
+        <div id="post-form" class="flex flex-col items-center space-y-4 mt-8">
+            <button id="post-btn" class="bg-primary text-primary-foreground px-4 py-2 rounded-md">Post</button>
+            <input type="file" id="image-upload" class="bg-input text-input placeholder-input placeholder-opacity-50 px-4 py-2 rounded-md" />
+        </div>
+        <div id="posts-container" class="mt-8"></div>
+        <div id="footer-placeholder"></div>
     </div>
+\
 
     <div id="posts-container"></div>
+        <script src="post.js"></script>
 
-    <script src="post.js"></script>
-
-    <!-- Placeholder for footer -->
     <div id="footer-placeholder"></div>
-
-    <!-- Import the JavaScript file -->
-    <script src="footer.js"></script>
+        <script src="footer.js"></script>
 
 </body>
 

@@ -1,0 +1,111 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.header {
+    background-color: rgba(218, 165, 32); /* Gold header background */
+    color: #fff; /* Light text */
+    padding: 16px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-column {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+    border-radius: 5px;
+}
+
+.donate-content {
+    margin-top: 80px; /* Adjusted to ensure content is below fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.donation-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+.donation-options {
+    margin-top: 20px;
+}
+
+.payment-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.payment-form form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-form input[type="number"],
+.payment-form input[type="text"],
+.payment-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-form button {
+    background-color: rgba(218, 165, 32); /* Gold button background */
+    color: #fff; /* Light text */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+    background-color: #ffd700; /* Lighter gold on hover */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(218, 165, 32); /* Gold footer background */
+    color: #fff; /* Light text */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

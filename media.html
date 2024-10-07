@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="dark.css">
+</head>
+
+<body>
+    <header>
+        <div class="toggle-container">
+            <button id="toggleButton" class="toggle-button"></button>
+            <div class="animation-container">
+                <iframe src="sky.html" class="animation-iframe animation1"></iframe>
+                <iframe src="night.html" class="animation-iframe animation2" style="display: none;"></iframe>
+                <iframe src="ocean.html" class="animation-iframe animation3" style="display: none;"></iframe>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="hamburger" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="settings" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="circle large"></div>
+                <div class="circle small"></div>
+            </div>        
+        </div>
+        <div class="menuBg hideMenu" aria-hidden="true">
+            <ul class="mobileNav">
+                <li><a href="bossie.html" class="nav-link home">Home</a></li>
+                <li><a href="about.html" class="nav-link about">About</a></li>
+                <li><a href="support.html" class="nav-link support">Support</a></li>
+                <li><a href="collab.html" class="nav-link collab">Collab</a></li>
+                <li><a href="media.html" class="nav-link active-page">Media</a></li>
+                <li><a href="/worlds/toggler.html" class="nav-link more"><i class="fas fa-ellipsis-h"></i></a></li>
+            </ul>
+        </div>
+        <div class="settingsBg hideMenu" aria-hidden="true">
+            <ul class="settingsNav">
+                <div class="dark">
+                    <input type="checkbox" id="darkModeToggle" role="switch" class="toggle" />
+                </div>
+                <li><a href="#profile" class="nav-link active-page"><i class="fas fa-user"></i></a></li>
+                <li><a href="#account"><i class="fas fa-user-circle"></i></a></li>
+                <li><a href="#preferences"><i class="fas fa-cog"></i></a></li>
+                <li><a href="#notifications"><i class="fas fa-bell"></i></a></li>
+                <li><a href="#privacy/#security"><i class="fas fa-shield-alt"></i></a></li>
+                <li><a href="#help"><i class="fas fa-question-circle"></i></a></li>
+                <li><a href="/dark.html" class="nav-link"><i class="fas fa-ellipsis-h"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <select id="categoryFilter" class="category-filter">
+            <option value="all">All Categories</option>
+            <option value="tech">Tech</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="education">Education</option>
+        </select>
+        <input type="text" id="tagSearch" placeholder="Search by tags...">
+    </section>
+
+    <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;" multiple>
+    <div id="fileDisplay"></div>
+    <div class="card-container"></div>
+
+    <template class="post" id="cardTemplate">
+        <div class="card" data-category="tech" data-tags="javascript, coding, webdev" data-date="2023-08-21">
+            <div class="card-content">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <img src="/images/IMG_0517.heic" alt="Avatar" class="avatar" id="openModalImage">
+                    </div>
+                    <div class="user-details">
+                        <span class="username">bossie</span>
+                        <span class="time-posted"></span>
+                    </div>
+                    <div class="notifications">
+                    <button class="notifications-button"><i class="fas fa-bell"></i></button>
+                    </div>
+                    <div class="options">
+                        <button class="options-button">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <div class="options-menu">
+                            <button class="delete-button"><i class="fas fa-trash"></i></button>
+                            <button class="edit-button"><i class="fas fa-edit"></i></button>
+                            <button class="share-button"><i class="fas fa-share"></i></button>
+                            <button class="report-button"><i class="fas fa-flag"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img class="main-image" src="" alt="VR Experience" style="display: none;" />
+                    <video class="main-image" style="display: none;"></video>
+                    <button class="mute-button">
+                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="caption-overlay">
+                        <p class="caption-text">Bossie Collective</p>
+                    </div>
+                </div>
+                    <div class="post-info">
+                        <div class="action-buttons">
+                            <button class="add-comment">
+                                <i class="fas fa-comment"></i>
+                            </button>
+                            <button class="like-post">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fas fa-heart-o"></i>
+                            </button>
+                            <button class="share-post">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L22 12L2 22L10 12L2 2Z" fill="#666"/>
+                                </svg>                            </button>
+                            <button class="bookmark">
+                                <i class="fas fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="likes">
+                            <span>1 <i class="fas fa-heart"></i></span>
+                        </div>
+                        <div class="hashtags">
+                            <p>Post #Boss #...</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="view-comments">View Comments</button>
+                    </div>
+                    <div class="comments-section">
+                        <!-- Comments will go here -->
+                    </div>
+            <!--
+                <div class="comment-form">
+                    <textarea class="comment-input" placeholder="Add a comment..."></textarea>
+                </div>
+            -->
+            </div>
+        </div>
+    </template>
+
+<!--
+    <!-- Avatar Modal
+    <div class="avatar"> -->
+        <div id="avatarModal" class="modal modal-avatar">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modal-avatar" src="/images/IMG_0517.heic" alt="Large Avatar" class="modal-photo">
+            </div>
+        </div>
+    <!-- 
+    </div> 
+
+    <!-- Video Modal 
+    <div class="video">
+        <div id="videoModal" class="modal modal-video">
+            <div class="modal-content">
+                <video id="modal-video" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="close" onclick="closeVideoModal()">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Modal
+    <div class="photo">
+        <div id="photoModal" class="modal modal-photo">
+            <div class="modal-content">
+                <img id="photo" src="" type="img/jpeg" alt="Expanded Photo">
+                <button class="close" onclick="closePhotoModal()">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Settings Section 
+    <section class="profile-settings">
+        <h3>Edit Profile</h3>
+        <input type="file" id="avatarUpload" accept="image/*">
+        <input type="text" id="username" placeholder="Username">
+        <textarea id="bio" placeholder="Your bio"></textarea>
+        <button id="saveProfile">Save Profile</button>
+    </section>
+-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/miscilanous/draft/test.js"></script>
+    <script src="footer.js"></script>
+    <script src="media.js"></script>
+    <script src="dark.js"></script>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
