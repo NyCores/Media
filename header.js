@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.appendChild(maroonLine);
 
     // Add or remove the transparent class based on the current page
-    if (currentPage === "/collab.html") {
-        header.classList.add("transparent");
-    } else {
+    if (currentPage === "collab.html") {
         header.classList.remove("transparent");
+    } else {
+        header.classList.add("transparent");
     }
 
     // Set unique padding for each page
