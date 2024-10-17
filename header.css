@@ -97,13 +97,3 @@
     z-index: 0;
     padding: var(--bubble-padding, 0px 21px); /* Use the variable or default value */
 }
-
-/* Maroon Line Styling */
-.maroon-line {
-    position: absolute;
-    height: 2px;
-    background-color: maroon;
-    pointer-events: none; /* Make sure it does not interfere with clicks */
-    z-index: 10; /* Ensure it is above other elements */
-    transition: transform 0.3s ease, width 0.3s ease;
-}
