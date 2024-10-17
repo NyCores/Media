@@ -19,7 +19,7 @@ document.getElementById('uploadButton').addEventListener('click', async () => {
 });
 
 async function uploadFileToGitHub(fileName, fileContent) {
-    const githubToken = 'YOUR_PERSONAL_ACCESS_TOKEN';  // Replace with your GitHub PAT
+    const githubToken = 'ghp_bd6KpOtvJsP×U2FmBgwKkcv5wZF22A1jxU1G';  // Replace with your GitHub PAT
     const repoOwner = 'NyCores';  // GitHub Username
     const repoName = 'Media';  // GitHub Repository Name
     const filePath = `media file/${fileName}`;  // Path to save in "media file" folder
