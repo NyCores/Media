@@ -3,16 +3,16 @@ document.getElementById('uploadButton').addEventListener('click', async () => {
     const file = fileInput.files[0];
 
     if (file) {
-        // Read the file as text
+        // Read the file content as text or base64
         const reader = new FileReader();
         reader.onload = async function (event) {
             const fileContent = event.target.result;
 
-            // Call the function to upload to GitHub
+            // Call the function to upload the file to GitHub
             await uploadFileToGitHub(file.name, fileContent);
         };
 
-        reader.readAsText(file);
+        reader.readAsText(file);  // You can also use `readAsDataURL` for non-text files
     } else {
         alert('Please select a file to upload.');
     }
@@ -20,24 +20,24 @@ document.getElementById('uploadButton').addEventListener('click', async () => {
 
 async function uploadFileToGitHub(fileName, fileContent) {
     const githubToken = 'YOUR_PERSONAL_ACCESS_TOKEN';  // Replace with your GitHub PAT
-    const repoOwner = 'YOUR_GITHUB_USERNAME';  // Replace with your GitHub username
-    const repoName = 'YOUR_REPOSITORY_NAME';  // Replace with your GitHub repository name
-    const filePath = `media file/${fileName}`;  // File path in the "media file" folder
+    const repoOwner = 'NyCores';  // GitHub Username
+    const repoName = 'Media';  // GitHub Repository Name
+    const filePath = `media file/${fileName}`;  // Path to save in "media file" folder
 
-    // Convert file content to Base64 format (GitHub requires this)
+    // Convert file content to Base64 format as required by GitHub
     const base64Content = btoa(fileContent);
 
-    // API URL to upload the file
+    // GitHub API URL to upload the file
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
 
-    // API request payload
+    // Payload for the API request
     const payload = {
-        message: `Adding ${fileName}`,  // Commit message
-        content: base64Content,         // Base64 encoded file content
+        message: `Add ${fileName}`,  // Commit message for uploading the file
+        content: base64Content,      // Base64 encoded file content
     };
 
     try {
-        // Make the API request to upload the file
+        // Send the PUT request to GitHub API to upload the file
         const response = await fetch(apiUrl, {
             method: 'PUT',
             headers: {
