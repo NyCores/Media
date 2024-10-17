@@ -13,7 +13,7 @@
 }
 
 .header.transparent {
-    background-color: #fff; /* Slightly transparent */
+    background-color: rgba(218, 165, 32, 0.4); /* Slightly transparent */
 }
 
 /* Brand Styles */
