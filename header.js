@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.appendChild(maroonLine);
 
     // Add or remove the transparent class based on the current page
-    if (currentPage === "bossie.html") {
+    if (currentPage === "collab.html") {
         header.classList.add("transparent");
     } else {
         header.classList.remove("transparent");
