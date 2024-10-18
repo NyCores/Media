@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 16px;
-    background-color: rgba(218, 165, 32); /* Less transparent (no alpha value) */
+    background-color: rgba(218, 165, 32, 0.4); /* Less transparent (no alpha value) */
     position: fixed;
     width: calc(100% - 32px);
     left: 0;
