@@ -1209,3 +1209,29 @@ button:hover {
 .view-comments:hover {
   color: rgb(153, 116, 22, 1);
 }
+
+/* Base styling for the filter section */
+@media screen and (max-width: 768px) {
+  .filter-section {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #tagSearch {
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #tagSearch {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
