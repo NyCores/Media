@@ -156,3 +156,14 @@ body, html {
   color: #000;
   font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .slideshow {
+    width: 100vh;
+    height: center;
+  }
+
+  .headline {
+    font-size: 1.5em;
+  }
+}
