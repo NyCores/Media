@@ -97,7 +97,7 @@
     z-index: 0;
     padding: var(--bubble-padding, 0px 21px); /* Use the variable or default value */
 }
-@media (max-width: 1200px)
+@media (max-width: 1000px)
 /* Originally it was 768px */
 {
     .header {
