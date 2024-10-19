@@ -1210,6 +1210,15 @@ button:hover {
   color: rgb(153, 116, 22, 1);
 }
 
+@media (max-width: 768px) {
+  .filter-section{
+    width: 100px;
+  }
+  .settingsBg {
+    left: 88%;  
+  }
+}
+
 /* Base styling for the filter section */
 @media screen and (max-width: 768px) {
   .filter-section {
