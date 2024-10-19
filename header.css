@@ -97,7 +97,9 @@
     z-index: 0;
     padding: var(--bubble-padding, 0px 21px); /* Use the variable or default value */
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px)
+/* Originally it was 768px */
+{
     .header {
         flex-direction: column;
         align-items: center;
