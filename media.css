@@ -1210,6 +1210,25 @@ button:hover {
   color: rgb(153, 116, 22, 1);
 }
 
+@media screen and (max-width: 768px) {
+  .settingsBg {
+    scale: 0.75;
+    background: #000080;
+    width: 120px;
+    height: 690px;
+    border-radius: 15px;
+    position: fixed;
+    top: 60%;
+    left: 72.5%;  
+    opacity: 1;
+    z-index: 11;
+    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0.001);
+    animation: showMenu 0.5s cubic-bezier(0.02, 1.25, 1, 1) forwards;
+  }
+}
+
+
 @media (max-width: 768px) {
   .filter-section{
     width: 100px;
