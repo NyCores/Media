@@ -133,38 +133,18 @@ nav ul li {
     display: none;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 1536px) {
-    /* Adjust modal-content size on smaller screens */
+@media (max-width: 1448px) {
     .modal-content {
-        width: 80%; /* Make the modal content wider */
-    }
-
-    /* Adjust modal-photo size for smaller devices */
-    .modal-photo {
-        width: 100%; /* Make the photo fill the modal width */
-        height: 100%; /* Automatically adjust height to keep the aspect ratio */
-        max-height: 300px; /* Limit the height of the image on smaller devices */
-        border-radius: 50%; /* Ensure it stays circular */
-    }
-
-    .modal-content h2 {
-        font-size: 18px; /* Slightly smaller font size for the name */
-    }
-}
-
-/* For very small devices (e.g. phones in portrait mode) */
-@media (max-width: 976px) {
-    .modal-content {
-        width: 90%; /* Full width modal */
-        
+        width: 80%;
     }
 
     .modal-photo {
-        max-height: 250px; /* Further limit the height of the image */
+        width: 44%;
+        height: 44%;
+        border-radius: 50%;
     }
 
     .modal-content h2 {
-        font-size: 16px; /* Further reduce font size for the name */
+        font-size: 18px;
     }
 }
