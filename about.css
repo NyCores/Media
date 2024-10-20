@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ body, html {
     margin: 0 15px 15px 0;
     border-radius: 50%;
     object-fit: cover;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .background-photo {
@@ -33,7 +34,7 @@ nav ul li {
     width: 80%;
     margin: auto;
     padding: 20px;
-    padding-top: 150px; 
+    padding-top: 150px;
     padding-bottom: 75px;
     font-size: 20px;
 }
@@ -42,16 +43,19 @@ nav ul li {
     margin-bottom: 20px;
 }
 
-.intro h2, .mission h2, .team h2 {
+.intro h2,
+.mission h2,
+.team h2 {
     color: #333;
     text-align: center;
-    padding: 10px; 
-    border-radius: 15px; 
-    width: fit-content; 
-    margin: 20px auto 0; 
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 20px auto 0;
 }
 
-.intro p, .mission p {
+.intro p,
+.mission p {
     line-height: 1.25;
 }
 
@@ -59,7 +63,8 @@ nav ul li {
     padding-left: 20px;
 }
 
-.intro p, .mission p {
+.intro p,
+.mission p {
     margin-bottom: 15px;
 }
 
@@ -92,32 +97,32 @@ nav ul li {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    backdrop-filter: blur(15px); /* Blurs the background */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
 }
 
 .modal-content {
     position: relative;
     margin: auto;
-    padding: 20px; /* Add padding to space out the content */
-    width: 35%; 
-    background-color: transparent; 
-    color: #000; 
-    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    width: 35%;
+    background-color: transparent;
+    color: #000;
+    border-radius: 10px;
     text-align: center;
     top: 50%;
-    transform: translateY(-50%); /* Vertically center the modal */
+    transform: translateY(-50%);
 }
 
 .modal-content h2 {
-    padding: 10px; /* Add padding to the heading */
+    padding: 10px;
     border: 5px solid #daa520;
-    background-color: white; /* White background */
-    color: #000; /* Black text */
-    border-radius: 15px; /* Rounded corners */
+    background-color: white;
+    color: #000;
+    border-radius: 15px;
     text-align: center;
-    width: fit-content; /* Adjust button size */
-    margin: 20px auto 0; /* Center the button and add margin to space out */
+    width: fit-content;
+    margin: 20px auto 0;
 }
 
 .modal-photo {
@@ -125,13 +130,33 @@ nav ul li {
     height: 500px;
     border-radius: 500px;
     border: 10px solid #daa520;
-    margin-bottom: 10px; /* Add margin to space out the photo and name */
+    margin-bottom: 10px;
 }
 
-/* Hide the close button */
 .close-button {
     display: none;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .headline {
+        font-size: 2em;
+        margin-bottom: 24px;
+        margin-top: 10px;
+    }
+}
+
 
 @media (max-width: 1448px) {
     .modal-content {
@@ -148,3 +173,5 @@ nav ul li {
         font-size: 18px;
     }
 }
+
+
