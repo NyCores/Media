@@ -445,46 +445,28 @@ body, html {
   opacity: 0;
 }
 
-.settingsNav {
+.settingsNav:not(.div) {
   top: 0;
-  left: 50%;  
+  left: 0%;  
   margin: 0;
   padding: 0;
   opacity: 0;
   width: 120px;
   height: 690px;
   z-index: 12;
-  position: fixed;
   text-align: center;
   border-radius: 15px;
-  transform: translate(-50%, 0);
+  transform: translate(0, 0);
   background: linear-gradient(to top, rgba(165, 22, 22, 0.829) 0%, rgba(22, 0, 224, 0.5) 100%);
 }
 
-.settingsNav::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-radius: 90%;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-top: 20px solid #800064;
-}
-
 .settingsNav .dark {
-  color: #a10b0b;
-  padding: -800px;
   background-color: transparent;
-  position: absolute;
-  top: 25.8px;
-  left: -24.5px;
-  transform: translateX(-50%);
-  margin-bottom: 20px;
-  margin-top: -239.5px;
+  position: fixed;
+  align-items: center;
+  cursor: pointer;
+  top: -266px;
+  right: -46px;
 }
 
 .mobileNav.fadeIn,
