@@ -25,3 +25,38 @@ body, html {
 .icon{
     padding-top: 350px;
 }
+
+@media screen and (max-width: 768px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+
+    .social-icons img {
+        width: 60px;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-icons {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .social-icons img {
+        width: 50px;
+    }
+
+    .icon {
+        padding-top: 100px;
+    }
+}
