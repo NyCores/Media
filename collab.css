@@ -8,6 +8,15 @@ body, html {
     color: #fff;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    margin-top: 100px; /* To prevent content from being under the header */
+}
+
 .social-icons {
     display: flex;
     justify-content: space-between; 
