@@ -132,3 +132,38 @@ nav ul li {
 .close-button {
     display: none;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust modal-content size on smaller screens */
+    .modal-content {
+        width: 80%; /* Make the modal content wider */
+    }
+
+    /* Adjust modal-photo size for smaller devices */
+    .modal-photo {
+        width: 100%; /* Make the photo fill the modal width */
+        height: auto; /* Automatically adjust height to keep the aspect ratio */
+        max-height: 300px; /* Limit the height of the image on smaller devices */
+        border-radius: 50%; /* Ensure it stays circular */
+    }
+
+    .modal-content h2 {
+        font-size: 18px; /* Slightly smaller font size for the name */
+    }
+}
+
+/* For very small devices (e.g. phones in portrait mode) */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Full width modal */
+    }
+
+    .modal-photo {
+        max-height: 250px; /* Further limit the height of the image */
+    }
+
+    .modal-content h2 {
+        font-size: 16px; /* Further reduce font size for the name */
+    }
+}
