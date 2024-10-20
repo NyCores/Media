@@ -134,7 +134,7 @@ nav ul li {
 }
 
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1536px) {
     /* Adjust modal-content size on smaller screens */
     .modal-content {
         width: 80%; /* Make the modal content wider */
@@ -154,7 +154,7 @@ nav ul li {
 }
 
 /* For very small devices (e.g. phones in portrait mode) */
-@media (max-width: 480px) {
+@media (max-width: 976px) {
     .modal-content {
         width: 90%; /* Full width modal */
     }
