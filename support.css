@@ -13,9 +13,8 @@ body, html {
     margin: auto;
     padding: 20px;
     padding-top: 90px;
-    padding-bottom: 75px;
+    padding-bottom: 275px;
     box-sizing: border-box;
-    margin-top: 100px; /* To prevent content from being under the header */
 }
 
 .intro {
