@@ -236,7 +236,6 @@ body, html {
   margin: 0;
   padding: 0;
 }
-/* .modal-content {margin: auto; width: 35%; background-color: transparent; color: #000; text-align: center; top: 50%; transform: translateY(-50%);}*/
 
 :root {
   --goldenrod: #daa520;
@@ -295,16 +294,16 @@ body, html {
 }
 
 .hamburger span:nth-child(1) {
-  top: 2.5px; /* 42.5px */
+  top: 2.5px; 
 }
 
 .hamburger span:nth-child(2),
 .hamburger span:nth-child(3) {
-  top: 17.5px ; /* 60px */
+  top: 17.5px ;
 }
 
 .hamburger span:nth-child(4) {
-  top: 32.5px; /* 77.5px */
+  top: 32.5px; 
 }
 
 .hamburger.open span:nth-child(1) {
@@ -655,7 +654,7 @@ body.dark-mode .mobileNav li a:hover, body.dark-mode .settingsNav li a:hover{
 }
 
 body.dark-mode .active-page {
-  background-color: #a0aec0; /**/
+  background-color: #a0aec0; 
 }
 
 body.dark-mode .active-page:hover {
@@ -843,7 +842,6 @@ body.dark-mode .options-menu button:hover {
   object-fit: cover;
 }
 
-/* Avatar Modal Styling */
 .modal-video .modal-content {
   width: 150px;
   height: 150px;
@@ -960,7 +958,7 @@ body.dark-mode .options-menu button:hover {
 
 .flagged {
   opacity: 0.5;
-  pointer-events: none; /* Disable interactions with flagged posts */
+  pointer-events: none;
   background-color: #ffe6e6;
 }
 .notification {
@@ -980,7 +978,6 @@ body.dark-mode .options-menu button:hover {
   to { opacity: 1; }
 }
 
-/* Base styling for the filter section */
 .filter-section {
   justify-content: space-between;
   align-items: center;
@@ -988,77 +985,66 @@ body.dark-mode .options-menu button:hover {
   padding: 1rem;
   padding-right: 40rem;
   padding-left: 40rem;
-  background-color: #f8f9fa; /* Light background color */
+  background-color: #f8f9fa; 
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the category filter dropdown */
 .category-filter {
   padding: -0.5rem -1rem;
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 50px;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
   font-size: 1rem;
   color: #495057;
 }
 
-/* Styling for the tag search input */
 #tagSearch {
   padding: 0.5rem 1rem;
   border: 1px solid #ced4da;
   border-radius: 4px;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
   font-size: 1rem;
   color: #495057;
   width: 200px;
 }
 
-/* Hover effect for inputs */
 .category-filter:hover, #tagSearch:hover {
-  border-color: #007bff; /* Blue border on hover */
+  border-color: #007bff; 
 }
 
-/* Focus effect for inputs */
 .category-filter:focus, #tagSearch:focus {
-  border-color: #0056b3; /* Darker blue border on focus */
+  border-color: #0056b3; 
   outline: none;
 }
 
-/* Dark mode styling for the filter section */
 .dark-mode .filter-section {
-  background-color: #343a40; /* Dark background color */
-  color: #e9ecef; /* Light text color */
+  background-color: #343a40; 
+  color: #e9ecef;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Dark mode styling for the category filter dropdown */
 .dark-mode .category-filter {
-  background-color: #495057; /* Darker background */
+  background-color: #495057; 
   border: 1px solid #6c757d;
   color: #e9ecef;
 }
 
-/* Dark mode styling for the tag search input */
 .dark-mode #tagSearch {
-  background-color: #495057; /* Darker background */
+  background-color: #495057;
   border: 1px solid #6c757d;
   color: #e9ecef;
 }
 
-/* Dark mode hover effect */
 .dark-mode .category-filter:hover, .dark-mode #tagSearch:hover {
-  border-color: #007bff; /* Blue border on hover */
+  border-color: #007bff;
 }
 
-/* Dark mode focus effect */
 .dark-mode .category-filter:focus, .dark-mode #tagSearch:focus {
-  border-color: #0056b3; /* Darker blue border on focus */
+  border-color: #0056b3; 
 }
 
-
-/* Profile Settings Section */
 .profile-settings {
   display: flex;
   flex-direction: column;
@@ -1093,7 +1079,6 @@ body.dark-mode .options-menu button:hover {
   background-color: #0056b3;
 }
 
-/* User Profile Section */
 .user-profile {
 }
 
@@ -1110,26 +1095,26 @@ body.dark-mode .options-menu button:hover {
 }
 
 button {
-  background-color: transparent !important; /* Make button transparent */
+  background-color: transparent !important; 
   color: grey;
   font-size: 14px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: transparent !important; /* Keep transparency on hover */
+  background-color: transparent !important; 
   color: rgb(153, 116, 22, 1);
 }
 
 .action-buttons {
   display: flex;
-  justify-content: left; /* Align buttons to the left */
-  margin-bottom: 10px; /* Space below the buttons */
+  justify-content: left; 
+  margin-bottom: 10px; 
 }
 
 .action-buttons button:last-child {
-  margin-left: auto; /* Push the last button to the far right */
-  justify-content: right; /* Align content within the button to the right */
+  margin-left: auto; 
+  justify-content: right; 
 }
 
 .action-buttons button {
@@ -1143,7 +1128,6 @@ button:hover {
   color: #777;
 }
 
-/* Likes Section */
 .likes {
   font-size: 14px;
   color: #666;
@@ -1151,7 +1135,7 @@ button:hover {
   justify-content: left;
   padding-left: 15px;
   align-items: center;
-  margin-bottom: 0px; /* Space below the likes */
+  margin-bottom: 0px; 
 }
 
 .likes i {
@@ -1159,19 +1143,17 @@ button:hover {
   color: #777;
 }
 
-/* Hashtags Section */
 .hashtags {
   margin-left: 15px;
   font-size: 14px;
   color: #777;
-  margin-bottom: 10px; /* Space below the hashtags */
+  margin-bottom: 10px; 
 }
 
 .hashtags p {
   margin: 0;
 }
 
-/* View Comments Button */
 .view-comments {
   background-color: transparent;
   color: grey;
@@ -1186,7 +1168,6 @@ button:hover {
   color: maroon;
 }
 
-/* General Button Hover Effects */
 .post-info button:hover i,
 .view-comments:hover {
   color: rgb(153, 116, 22, 1);
@@ -1197,7 +1178,6 @@ button:hover {
     scale: 0.75;
 }
 
-
 @media (max-width: 768px) {
   .filter-section{
     width: 100px;
@@ -1207,7 +1187,6 @@ button:hover {
   }
 }
 
-/* Base styling for the filter section */
 @media screen and (max-width: 768px) {
   .filter-section {
     justify-content: space-between;
